@@ -1,4 +1,4 @@
-package network
+package org.example.project.network
 
 import app.cash.paging.Pager
 import app.cash.paging.PagingData
@@ -7,7 +7,7 @@ import io.ktor.client.HttpClient
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import org.example.project.models.Products
-import network.ApiService.getProducts
+import org.example.project.network.ApiService.getProducts
 
 class NetworkRepository(private val httpClient: HttpClient) {
     fun getProducts(): Flow<PagingData<Products>> = Pager(
@@ -15,7 +15,8 @@ class NetworkRepository(private val httpClient: HttpClient) {
         pagingSourceFactory = {
             ResultPagingSource { page, _ ->
                 delay(800)
-                httpClient.getProducts(page).map { it.list }
+              val a=  httpClient.getProducts(page).map { it.list }
+                a
             }
         }
     ).flow

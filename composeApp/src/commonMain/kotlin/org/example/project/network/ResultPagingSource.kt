@@ -1,4 +1,4 @@
-package network
+package org.example.project.network
 
 import androidx.paging.PagingState
 import app.cash.paging.PagingSource

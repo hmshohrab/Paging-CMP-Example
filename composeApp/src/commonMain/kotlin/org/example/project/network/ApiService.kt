@@ -1,4 +1,4 @@
-package network
+package org.example.project.network
 
 import io.ktor.client.HttpClient
 import io.ktor.client.request.url

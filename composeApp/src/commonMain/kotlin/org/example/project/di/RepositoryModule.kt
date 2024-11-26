@@ -1,6 +1,6 @@
 package org.example.project.di
 
-import network.NetworkRepository
+import org.example.project.network.NetworkRepository
 import org.koin.dsl.module
 
 val provideRepositoryModule = module {
